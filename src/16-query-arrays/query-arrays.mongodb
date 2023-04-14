@@ -1,0 +1,9 @@
+use("platzi_store")
+
+//$in -> values and arrays
+//db.inventory.find({ qty: { $in: [20, 25] } })
+//db.inventory.find({ tags: { $in: ["book", "electronics"] } })
+
+//$nin -> values and arrays
+db.inventory.find({ qty: { $nin: [20, 25] } })
+//db.inventory.find({ tags: { $nin: ["book", "electronics"] } })
