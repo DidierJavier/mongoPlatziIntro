@@ -1,0 +1,8 @@
+use("sample_training")
+
+//sort con 1 = ordena de menor a mayor (ascendente)(0 - 10, A - Z)
+//-1 descendente = de mayor a menor (10 - 0, Z - A)
+db.zips
+    .find({pop: {$gte: 100}})
+    .sort({pop: -1})
+    .limit(2)
